@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CityGeneration.Contracts.Rest\CityGeneration.Contracts.Rest.csproj" />
+      <ProjectReference Include="..\CityGeneration.Contracts\CityGeneration.Contracts.csproj" />
       <ProjectReference Include="..\CityGeneration.Core.Data\CityGeneration.Core.Data.csproj" />
     </ItemGroup>
 

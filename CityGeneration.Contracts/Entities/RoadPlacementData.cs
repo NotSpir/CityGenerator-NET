@@ -1,6 +1,6 @@
 using CityGeneration.Core.Data.DataModels;
 
-namespace CityGeneration.Contracts.Rest.Entities;
+namespace CityGeneration.Contracts.Entities;
 
 public record struct RoadPlacementData()
 {

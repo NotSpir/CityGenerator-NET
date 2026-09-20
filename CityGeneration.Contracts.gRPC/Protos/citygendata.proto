@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+option csharp_namespace = "CityGeneration.Contracts.gRPC";
+
+package citygendata;
+
+service CityGenData {
+  rpc GetRoadNetwork (RoadRequest) returns (RoadData);
+  rpc GetBuildings (RoadData) returns (BuildingReply);
+  rpc GetPathBetweenPoints (RoadPathRequest) returns (RoadPathReply);
+}
+
+message IntList {
+  repeated int32 values = 1;
+}
+
+message RoadSector {
+  repeated int32 edges = 1;
+  repeated int32 vertex_list = 2;
+}
+
+message RoadSegment {
+  int32 start_id = 1;
+  int32 end_id = 2;
+  string type = 3;
+}
+
+message RoadRequest {
+  int32 seed = 1;
+  int32 width = 2;
+  int32 height = 3;
+  int32 split_iterations = 5;
+  float block_chance = 6;
+  float deviation = 7;
+}
+
+message RoadPathRequest {
+  RoadData road_data = 1;
+  int32 start_id = 2;
+  int32 end_id = 3;
+}
+
+message Vector2 {
+  float x = 1;
+  float y = 2;
+}
+
+message Building {
+  repeated Vector2 corners = 1;
+}
+
+message RoadData {
+  repeated Vector2 vertex_list = 1;
+  repeated RoadSegment road_segments = 2;
+  map<int32, IntList> vertex_edges = 3; 
+  repeated RoadSector sectors = 4;
+  int32 cell_size = 5;
+}
+
+message RoadPathReply {
+  repeated int32 path = 1;
+}
+
+message BuildingReply {
+  repeated Building buildings = 1;
+}

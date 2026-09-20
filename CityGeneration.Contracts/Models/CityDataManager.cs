@@ -1,10 +1,11 @@
+using CityGeneration.Contracts.Entities;
 using CityGeneration.Core.BuildingModels;
 using CityGeneration.Core.Data.DataModels;
 using CityGeneration.Core.PathSearchModels;
 using CityGeneration.Core.RoadLayouts;
 using CityGeneration.Core.RoadModels;
 
-namespace CityGeneration.Contracts.Rest.Entities;
+namespace CityGeneration.Contracts.Models;
 
 public static class CityDataManager
 {

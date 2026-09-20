@@ -1,6 +1,6 @@
 using System.Globalization;
 using CityGeneration.Blazor.Models;
-using CityGeneration.Contracts.Rest.Entities;
+using CityGeneration.Contracts.Entities;
 using CityGeneration.Core.Data.DataModels;
 using Microsoft.AspNetCore.Http.Json;
 

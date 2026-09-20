@@ -1,6 +1,5 @@
-using System.Text.Json;
-using CityGeneration.Contracts.Rest.Entities;
-using Microsoft.AspNetCore.Http.HttpResults;
+using CityGeneration.Contracts.Entities;
+using CityGeneration.Contracts.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CityGeneration.Api.Rest.Controllers;
